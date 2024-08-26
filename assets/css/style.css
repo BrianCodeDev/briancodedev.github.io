@@ -6,7 +6,12 @@
   overflow: hidden;
   margin-bottom: 10px;
 }
-
+.brand-logo img {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+}
 .progress-bar {
   height: 100%;
   transition: width 0.6s ease;
