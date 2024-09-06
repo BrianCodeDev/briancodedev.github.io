@@ -599,7 +599,9 @@ h3 {
 .card .card-title {
   font-size: 24px;
 }
-
+.card .card-image img {
+  object-fit: cover;
+}
 .card .card-content .card-title {
   line-height: 2.5rem;
 }
