@@ -389,7 +389,7 @@ ul.side-nav li {
 
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: white;
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
