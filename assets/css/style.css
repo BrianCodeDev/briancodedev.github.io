@@ -368,7 +368,9 @@ dt {
   display: inline-block;
   margin-left: 0.5rem;
 }
-
+.side-nav {
+  background-color:  black;
+}
 ul.side-nav {
   width: 190px;
 }
