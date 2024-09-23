@@ -369,7 +369,7 @@ dt {
   margin-left: 0.5rem;
 }
 .side-nav {
-  background-color:  black;
+  background-color:  rgb(18, 18, 18) !important;
 }
 ul.side-nav {
   width: 190px;
@@ -409,7 +409,7 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
 } */
 
 ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
+  background-color: rgb(18, 18, 18);
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
@@ -422,13 +422,14 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #fafafa;
+  background-color: #1d1d1d;
   border-left: 3px solid;
 }
 
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
-  color: #333 !important;
+  color: #00aa1f !important;
 }
+
 
 li.logo span {
   display: block;
@@ -481,7 +482,8 @@ h3 {
   font-weight: 200;
   left: 0;
   position: absolute;
-  top: 0;
+  top: 140px;
+
 }
 
 /* #intro.section .container *:not(span) {
