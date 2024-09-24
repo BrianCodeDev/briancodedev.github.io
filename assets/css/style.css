@@ -159,7 +159,7 @@ progress {
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(4, 214, 102, 0.997); 
+  border: 4px solid #a7ffeb; 
   border-radius: 50% !important;
 }
 
