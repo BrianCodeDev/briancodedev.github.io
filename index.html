@@ -808,24 +808,25 @@
   
    
     <script>
-      const repoUrl = 'https://github.com/BrianCodeDev/briancodedev.github.io';
-
+      const repoUrl = 'https://api.github.com/repos/BrianCodeDev/briancodedev.github.io';
+    
       fetch(repoUrl)
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Network response was not ok');
-              }
-              return response.json();
-          })
-          .then(data => {
-              const starCount = data.stargazers_count;
-              document.getElementById('starCount').innerText = `${starCount} stars`;
-          })
-          .catch(error => {
-              console.error('Error fetching the star count:', error);
-              document.getElementById('starCount').innerText = 'Error fetching stars';
-          });
-  </script>
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const starCount = data.stargazers_count;
+          document.getElementById('starCount').innerText = `${starCount} stars`;
+        })
+        .catch(error => {
+          console.error('Error fetching the star count:', error);
+          document.getElementById('starCount').innerText = 'Error fetching stars';
+        });
+    </script>
+    
 
 
   <!-- typed.js -->
