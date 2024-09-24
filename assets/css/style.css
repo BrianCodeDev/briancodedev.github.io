@@ -55,6 +55,9 @@
   width: 100px;
   border-radius: 100px;
 }
+.heart-move {
+  margin-top: 20px;
+}
 .progress-bar {
   height: 100%;
   transition: width 0.6s ease;
@@ -276,14 +279,15 @@ progress {
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #00796b;
+  color: #069fff;
   border: 2px solid #fff;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 20px;
   letter-spacing: 1px;
   display: inline-block;
   border-radius: 5px;
   -webkit-border-radius: 5px;
+  margin-top: 20px;
 }
 
 /* .readme:hover{
@@ -294,16 +298,16 @@ progress {
 .contactme {
   position: relative;
   padding: 11px 35px;
-  background: none;
-  color: #fff;
+  background: #fff;
+  color: #069fff;
   border: 2px solid #fff;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 20px;
   letter-spacing: 1px;
   display: inline-block;
-  margin-top: 1.5em;
   border-radius: 5px;
   -webkit-border-radius: 5px;
+  margin-top: 20px;
 }
 
 .contactme:hover{
@@ -424,7 +428,7 @@ dt {
   margin-left: 0.5rem;
 }
 .side-nav {
-  background-color:  rgb(18, 18, 18) !important;
+  background-color:  #121212 !important;
 }
 ul.side-nav {
   width: 190px;
@@ -464,7 +468,7 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
 } */
 
 ul.side-nav.fixed li.logo {
-  background-color: rgb(18, 18, 18);
+  background-color: #121212;
   border-bottom: 1px solid #ddd;
   box-sizing: content-box;
   min-height: 90px;
@@ -477,12 +481,12 @@ ul.side-nav.fixed li.logo a {
 }
 
 ul.table-of-contents li:not(.logo) a.active, ul.table-of-contents li:not(.logo) a:hover {
-  background-color: #1d1d1d;
+  background-color: #121212;
   border-left: 3px solid;
 }
 
 ul.side-nav.fixed.table-of-contents li:not(.logo) a span, ul#slide-out li:not(.logo) a span {
-  color: #00aa1f !important;
+  color: #ffffff !important;
 }
 
 
@@ -528,7 +532,7 @@ h3 {
 } */
 
 #intro.section {
-  background: #a7ffeb repeat;
+  background: #121212 repeat;
   position: relative;
 }
 
