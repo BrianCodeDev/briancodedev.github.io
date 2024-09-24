@@ -810,22 +810,32 @@
     <script>
       const repoUrl = 'https://api.github.com/repos/BrianCodeDev/briancodedev.github.io';
     
-      fetch(repoUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
+      function fetchStarCount() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', repoUrl, true);
+    
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            const starCount = data.stargazers_count;
+            document.getElementById('starCount').innerText = `${starCount} hearts`;
+          } else if (xhr.readyState === 4 && xhr.status !== 200) {
+            console.error('Error fetching the star count:', xhr.statusText);
+            document.getElementById('starCount').innerText = 'Error fetching stars';
           }
-          return response.json();
-        })
-        .then(data => {
-          const starCount = data.stargazers_count;
-          document.getElementById('starCount').innerText = `${starCount} hearts`;
-        })
-        .catch(error => {
-          console.error('Error fetching the star count:', error);
-          document.getElementById('starCount').innerText = 'Error fetching stars';
-        });
+        };
+    
+        xhr.send();
+      }
+    
+      // Initial fetch on page load
+      fetchStarCount();
+    
+      // Set an interval to update the star count every 1 second (1000 milliseconds)
+      setInterval(fetchStarCount, 1000);
     </script>
+    
+    
     
 
 
