@@ -363,7 +363,19 @@ dd {
   font-weight: 500;
   margin-left: 0;
 }
-
+.heart-btn {
+  font-size: 50px;
+  color: grey;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.hearted {
+  color: red;
+}
+.heart-count {
+  font-size: 24px;
+  margin-top: 10px;
+}
 dt {
   display: inline-block;
   margin-left: 0.5rem;

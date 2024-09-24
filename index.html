@@ -146,6 +146,7 @@
               <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
               <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
               <h5>Self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems.</h5>
+
             </div>
             <div class="social">
               <a href="https://www.linkedin.com/in/brian-kelley-profile/" target="_blank">
@@ -163,8 +164,12 @@
       <div class='buttons'>
         <a href="#about" class="readme">Read More</a>
         <a href="#contact" class="contactme">Contact Me</a>
+        
       </div>
-
+      <div style="display: flex;">
+        <i id="heartIcon" class="fa-solid fa-heart heart-btn"></i>
+        <div id="heartCount" class="heart-count" style="padding-left: 10px;"></div>
+    </div>
   
 
           </div>
@@ -771,15 +776,15 @@
       <h3 class="page-title white-text teal">Contact</h3>
       <div class="container">
         <p>
-          <a aria-label="Call Brian Kelley" data-position="top" data-tooltip="Call Varad"
+          <a aria-label="Call Brian Kelley" data-position="top" data-tooltip="brian"
             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
-              aria-label="Call Brian Kelley">+1254-499-2121</a></a>
+              aria-label="Call Brian Kelley">+1254-499-2121 | Hiring purposes or job related stuff only</a></a>
         </p>
         <p>
           <a aria-label="Email Brian Kelley" href="mailto:briankelley141@gmail.com" target="_blank" data-position="top"
             data-tooltip="Email Brian Kelley" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i><a aria-label="Email Varad" href="mailto:briankelley141@gmail.com"
-              class="hoverline">briankelley141@gmail.com</a></a>
+              class="fa fa-envelope"></i><a aria-label="brian" href="mailto:briankelley141@gmail.com"
+              class="hoverline">briankelley141@gmail.com | Hiring purposes or job related stuff only</a></a>
         </p>
         <p>
           <a aria-label="Brian Kelley on GitHub" href="http://github.com/briancodedev" target="_blank"
@@ -798,7 +803,52 @@
       </div>
     </section>
   </main>
+  <script>
+    const apiUrl = 'http://localhost:5000/heart';
 
+    // Fetch initial heart data from the server
+    async function fetchHeartData() {
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            updateHeartDisplay(data.hearted, data.heartCount);
+        } catch (error) {
+            console.error('Error fetching heart data:', error);
+        }
+    }
+
+    // Update heart display
+    function updateHeartDisplay(hearted, heartCount) {
+        document.getElementById('heartIcon').classList.toggle('hearted', hearted);
+        document.getElementById('heartCount').textContent = heartCount;
+    }
+
+    // Send heart update to the server
+    async function updateHeartStatus(hearted) {
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ hearted })
+            });
+            const data = await response.json();
+            updateHeartDisplay(data.hearted, data.heartCount);
+        } catch (error) {
+            console.error('Error updating heart status:', error);
+        }
+    }
+
+    // Click event for the heart icon
+    document.getElementById('heartIcon').addEventListener('click', async function() {
+        const hearted = !document.getElementById('heartIcon').classList.contains('hearted');
+        await updateHeartStatus(hearted);
+    });
+
+    // Fetch heart data on page load
+    window.onload = fetchHeartData;
+</script>
   <!-- typed.js -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
