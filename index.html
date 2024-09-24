@@ -806,6 +806,22 @@
   <script>
     const apiUrl = 'http://localhost:5000/heart';
 
+    // Function to generate a random UUID
+    function generateUUID() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            const r = Math.random() * 16 | 0;
+            const v = c === 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    // Get or generate the user's UUID and store it in localStorage
+    let userUUID = localStorage.getItem('userUUID');
+    if (!userUUID) {
+        userUUID = generateUUID();
+        localStorage.setItem('userUUID', userUUID);
+    }
+
     // Fetch initial heart data from the server
     async function fetchHeartData() {
         try {
@@ -831,8 +847,14 @@
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ hearted })
+                body: JSON.stringify({ hearted, userUUID }) // Send UUID to server
             });
+
+            if (response.status === 403) {
+                alert('You have already hearted this page.');
+                return;
+            }
+
             const data = await response.json();
             updateHeartDisplay(data.hearted, data.heartCount);
         } catch (error) {
