@@ -9,11 +9,6 @@ Hey! I'm Brian Kelley, a WordPress developer with over 4 years of hands-on exper
 - **Frameworks/Tools:** Bootstrap, jQuery, Gutenberg Block Development
 - **Focus:** Responsive design, SEO optimization, and creating great user experiences.
 
-### Back-End Development:
-- **Languages:** PHP, MySQL
-- **Tools:** WordPress, WooCommerce
-- **Focus:** Custom plugin and theme development, WooCommerce integration, database management.
-
 ### Tools & Workflow:
 - **Version Control:** Git
 - **Development Environment:** Docker
