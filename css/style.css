@@ -313,10 +313,12 @@ a {
 .profile-hero .banner {
   width: 100%;
   height: 200px;
-  background-image: url("../assets/linkedin.png");
-  background-size: cover;
+  background-image: url("https://media.licdn.com/dms/image/v2/D5616AQHrZJCrxcUilA/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1732831936863?e=1738800000&v=beta&t=vKzUgoCTYYYrV-md4PNJ2yb2MbxxipjTXCGs3evwYr0");
+  background-size: 100% 100%;
   background-position: center;
-  border: 4px solid #eeeaea;}
+  border: 4px solid #eeeaea;
+  object-fit: cover;
+}
 
 .profile-hero .content {
   position: relative;
