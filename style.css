@@ -218,6 +218,10 @@ body {
 .navbar .container .navbar-brand {
     font-size: 20px;
     font-weight: bold;
+    color: darkgreen;
+}
+.navbar .container img {
+  margin-right: 15px;
 }
 .collapse .navbar-nav .nav-item .nav-link {
     font-size: 20px;
@@ -255,7 +259,7 @@ body {
 }
 .d-flex .navbar-button {
     padding: 10px 35px;
-    background-color: #353535;
+    background-color:#3C6E71;
     color: white;
     font-size: 20px;
     border-radius: 100px;
