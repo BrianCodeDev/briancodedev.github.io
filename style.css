@@ -257,6 +257,19 @@ body {
 .d-flex {
     gap: 20px;
 }
+.navbar .nav-link {
+  font-weight: bold; /* Ensures bold font by default */
+  transition: none; /* Prevents font-weight transition delays */
+}
+
+.navbar-collapse {
+  display: none; /* Prevents flash of unstyled content */
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
 .d-flex .navbar-button {
     padding: 10px 35px;
     background-color:#3C6E71;
