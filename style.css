@@ -226,13 +226,13 @@ body {
 .collapse .navbar-nav .nav-item .nav-link {
     font-size: 20px;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
     color: black;
 }
 .collapse .navbar-nav .nav-item .nav-link:hover {
   font-size: 20px;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
   color: #2E4A62;
 }
 .navbar-toggler {
