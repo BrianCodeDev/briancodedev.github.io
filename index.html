@@ -264,30 +264,7 @@
       <footer>
         <a href="#">Loved By BrianCodeDev ❤️</a>
       </footer>
-      <script>
-        // Get the button and popup elements
-        const button = document.querySelector('.navbar-button');
-        const popup = document.getElementById('popup');
-    
-        // When button is clicked, show the popup with fade effect
-        button.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent the default action of the link
-    
-          // Display and fade in the popup
-          popup.style.display = 'block';
-          setTimeout(() => {
-            popup.style.opacity = 1;
-          }, 10); // Small delay to trigger transition
-    
-          // Hide the popup after 3 seconds
-          setTimeout(() => {
-            popup.style.opacity = 0;
-            setTimeout(() => {
-              popup.style.display = 'none';
-            }, 1000); // Hide the popup after the fade out
-          }, 3000); // 3 seconds before fading out
-        });
-      </script>
+
       <script src="https://kit.fontawesome.com/31778849f3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
