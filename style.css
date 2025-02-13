@@ -223,6 +223,9 @@ body {
 .navbar .container img {
   margin-right: 15px;
 }
+.card-body img {
+  border: 1px solid rgb(167, 167, 167);
+}
 .collapse .navbar-nav .nav-item .nav-link {
     font-size: 20px;
     font-weight: bold;
