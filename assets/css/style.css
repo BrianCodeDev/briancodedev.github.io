@@ -2,6 +2,29 @@
 /*--------------------------------------------------------------
 # Global Settings
 --------------------------------------------------------------*/
+.project-card {
+  background: #111;
+}
+
+.project-card img {
+  display: block;
+}
+
+.project-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-overlay a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.project-overlay a:hover {
+  text-decoration: underline;
+  color: #c7c7ff;
+}
 
 /* CSS */
 .button-85 {
